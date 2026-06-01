@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="/src/style.css" />
-  <link rel="stylesheet" href="/src/pages.css" />
+  <link rel="stylesheet" href="src/style.css" />
+  <link rel="stylesheet" href="src/pages.css" />
   
   <style>
     .story-hero {
@@ -20,7 +20,7 @@
       align-items: flex-end;
       padding-bottom: 10vh;
       background: linear-gradient(180deg, rgba(10,18,20,0.2) 0%, var(--background) 95%),
-                  url('/images/chococol/nosotros-hero.jpeg') center/cover no-repeat;
+                  url('images/chococol/nosotros-hero.jpeg') center/cover no-repeat;
       position: relative;
     }
     
@@ -110,15 +110,15 @@
 
   <!-- ═══════════ HEADER ═══════════ -->
   <header id="main-header">
-    <a href="/" class="logo-container">
-      <img src="/logo-new.png.webp" alt="Agua Pura Colombia" style="filter: brightness(0) invert(1);" />
+    <a href="index.html" class="logo-container">
+      <img src="logo-new.png.webp" alt="Agua Pura Colombia" style="filter: brightness(0) invert(1);" />
     </a>
     <nav class="desktop-nav">
-      <a href="/">Inicio</a>
-      <a href="/nosotros.html" class="active">Nosotros</a>
-      <a href="/#tecnologia">Tecnología</a>
-      <a href="/#proyectos">Proyectos</a>
-      <a href="/#impacto">Impacto</a>
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html" class="active">Nosotros</a>
+      <a href="index.html#tecnologia">Tecnología</a>
+      <a href="index.html#proyectos">Proyectos</a>
+      <a href="index.html#impacto">Impacto</a>
       <a href="#contacto">Contacto</a>
     </nav>
     <button class="mobile-toggle" aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false">☰</button>
@@ -128,15 +128,15 @@
   <!-- ═══════════ MOBILE MENU ═══════════ -->
   <div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
     <div class="mobile-menu-header">
-      <img src="/logo-new.png.webp" alt="Agua Pura" style="height:32px;" />
+      <img src="logo-new.png.webp" alt="Agua Pura" style="height:32px;" />
       <button class="mobile-close" aria-label="Cerrar menú">✕</button>
     </div>
     <nav class="mobile-nav">
-      <a href="/">Inicio</a>
-      <a href="/nosotros.html" class="active">Nosotros</a>
-      <a href="/#tecnologia">Tecnología</a>
-      <a href="/#proyectos">Proyectos</a>
-      <a href="/#impacto">Impacto</a>
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html" class="active">Nosotros</a>
+      <a href="index.html#tecnologia">Tecnología</a>
+      <a href="index.html#proyectos">Proyectos</a>
+      <a href="index.html#impacto">Impacto</a>
       <a href="#contacto">Contacto</a>
     </nav>
     <div class="mobile-menu-footer">
@@ -176,7 +176,7 @@
           </div>
         </div>
         <div class="glass-panel" style="padding: 0; overflow: hidden; border-radius: var(--radius-xl);">
-          <img src="/images/chococol/nosotros.jpeg" alt="Comunidad y Propósito" style="width: 100%; height: 600px; object-fit: cover;" />
+          <img src="images/chococol/nosotros.jpeg" alt="Comunidad y Propósito" style="width: 100%; height: 600px; object-fit: cover;" />
         </div>
       </div>
     </div>
@@ -286,7 +286,7 @@
           </div>
           <div style="display: flex; justify-content: center; align-items: center;">
             <div style="position: relative; width: 65%; cursor: zoom-in;" onclick="openBicModal()" onmouseover="this.querySelector('img').style.transform='scale(1.05)'" onmouseout="this.querySelector('img').style.transform='scale(1)'">
-              <img src="/images/chococol/diagrama-bic.webp" alt="Modelo BIC" style="width: 100%; filter: drop-shadow(0 0 30px rgba(0,240,255,0.1)); transition: transform 0.4s ease;" />
+              <img src="images/chococol/diagrama-bic.webp" alt="Modelo BIC" style="width: 100%; filter: drop-shadow(0 0 30px rgba(0,240,255,0.1)); transition: transform 0.4s ease;" />
               <div style="position: absolute; bottom: 24px; right: 24px; background: rgba(0,240,255,0.1); border: 1px solid var(--primary); color: var(--primary); padding: 8px 16px; border-radius: 20px; font-size: 12px; display: flex; align-items: center; gap: 8px; backdrop-filter: blur(4px); pointer-events: none;">
                 <span class="material-symbols-outlined" style="font-size: 16px;">zoom_in</span> Ampliar
               </div>
@@ -315,7 +315,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <img src="/logo-new.png.webp" alt="Agua Pura Colombia" style="height:48px; margin-bottom:20px; filter: brightness(0) invert(1);" />
+          <img src="logo-new.png.webp" alt="Agua Pura Colombia" style="height:48px; margin-bottom:20px; filter: brightness(0) invert(1);" />
           <p class="text-body-sm" style="max-width:360px;">Transformando la gestión de recursos hídricos mediante biotecnología y nanotecnología para un futuro sostenible en Colombia.</p>
         </div>
         <div class="footer-contact">
@@ -333,11 +333,11 @@
         </div>
         <nav class="footer-nav">
           <h4 class="text-label-caps text-primary" style="margin-bottom:16px;">Navegación</h4>
-          <a href="/">Inicio</a>
-          <a href="/nosotros.html">Nosotros</a>
-          <a href="/#tecnologia">Tecnología</a>
-          <a href="/#proyectos">Proyectos</a>
-          <a href="/#impacto">Impacto</a>
+          <a href="index.html">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="index.html#tecnologia">Tecnología</a>
+          <a href="index.html#proyectos">Proyectos</a>
+          <a href="index.html#impacto">Impacto</a>
         </nav>
       </div>
       <div class="footer-bottom">
@@ -357,7 +357,7 @@
         </div>
         <h2 class="text-headline-lg text-white" style="margin-bottom: 24px;">Iniciar un <span class="text-primary">Proyecto</span></h2>
         
-        <form class="contact-form" action="/contact.php" method="POST">
+        <form class="contact-form" action="contact.php" method="POST">
           <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div class="form-group">
               <label class="text-label-caps" for="contact-nombre">Nombre Completo *</label>
@@ -386,7 +386,7 @@
   <!-- ═══════════ IMAGE MODAL (BIC) ═══════════ -->
   <div id="bic-modal" class="modal" role="dialog" aria-modal="true" onclick="closeBicModal()" aria-hidden="true" inert>
     <button class="modal-close" aria-label="Cerrar imagen ampliada" style="position:absolute; top:32px; right:32px; background:none; border:none; color:white; font-size:32px; cursor:pointer;">✕</button>
-    <img src="/images/chococol/diagrama-bic.webp" alt="Modelo BIC Ampliado" style="max-width: 90%; max-height: 90vh; object-fit: contain; filter: drop-shadow(0 0 40px rgba(0,240,255,0.2)); cursor: zoom-out;" />
+    <img src="images/chococol/diagrama-bic.webp" alt="Modelo BIC Ampliado" style="max-width: 90%; max-height: 90vh; object-fit: contain; filter: drop-shadow(0 0 40px rgba(0,240,255,0.2)); cursor: zoom-out;" />
   </div>
 
   <script>
@@ -406,6 +406,6 @@
     }
   </script>
 
-  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="src/main.js"></script>
 </body>
 </html>

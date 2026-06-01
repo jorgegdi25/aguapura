@@ -307,7 +307,7 @@
   overflow: hidden;
   background:
     linear-gradient(rgba(10,18,20,0.85), rgba(10,18,20,0.85)),
-    url('/images/chococol/tech-water.jpeg') center/cover;
+    url('../public/images/chococol/tech-water.jpeg') center/cover;
 }
 
 /* ── Contact ── */
