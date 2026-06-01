@@ -1,0 +1,34 @@
+name: Build and Push to Deploy Branch
+
+on:
+  push:
+    branches:
+      - main  # Se ejecuta automáticamente al hacer push a la rama 'main'
+
+permissions:
+  contents: write  # Permite a la acción escribir y crear la rama 'deploy'
+
+jobs:
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ⚙️
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install and Build 🔧
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy to Branch 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.6.0
+        with:
+          folder: dist          # La carpeta que se subirá
+          branch: deploy        # La rama de destino en tu GitHub
+          clean: true           # Limpia los archivos antiguos en la rama

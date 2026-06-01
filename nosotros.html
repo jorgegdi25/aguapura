@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros | Agua Pura Colombia - Historia e Innovación</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="/src/pages.css" />
+  
+  <style>
+    .story-hero {
+      height: 90vh;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 10vh;
+      background: linear-gradient(180deg, rgba(10,18,20,0.2) 0%, var(--background) 95%),
+                  url('/images/chococol/nosotros-hero.jpeg') center/cover no-repeat;
+      position: relative;
+    }
+    
+    .phd-card {
+      position: relative;
+      padding: 48px 40px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0) 100%);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .phd-card:hover {
+      border-color: rgba(0, 240, 255, 0.3);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(0, 240, 255, 0.08);
+      background: linear-gradient(145deg, rgba(0, 240, 255, 0.05) 0%, rgba(255,255,255,0) 100%);
+    }
+
+    .phd-number {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      font-family: var(--font-display);
+      font-size: 140px;
+      font-weight: 800;
+      color: rgba(255,255,255,0.02);
+      line-height: 1;
+      pointer-events: none;
+      transition: color 0.4s ease;
+    }
+
+    .phd-card:hover .phd-number {
+      color: rgba(0, 240, 255, 0.05);
+    }
+
+    .phd-icon {
+      font-size: 32px;
+      color: var(--primary);
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-top: 64px;
+    }
+
+    @media(min-width: 992px) {
+      .leadership-grid {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+
+    .leader-featured {
+      padding: 56px 48px;
+      background: linear-gradient(135deg, rgba(0, 240, 255, 0.05) 0%, rgba(0,0,0,0) 100%);
+      border: 1px solid rgba(0, 240, 255, 0.15);
+      border-radius: var(--radius-xl);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .leader-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .leader-card {
+      padding: 40px;
+      border-radius: var(--radius-lg);
+      background: var(--surface-container);
+      border: 1px solid rgba(255,255,255,0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header id="main-header">
+    <a href="/" class="logo-container">
+      <img src="/logo-new.png.webp" alt="Agua Pura Colombia" style="filter: brightness(0) invert(1);" />
+    </a>
+    <nav class="desktop-nav">
+      <a href="/">Inicio</a>
+      <a href="/nosotros.html" class="active">Nosotros</a>
+      <a href="/#tecnologia">Tecnología</a>
+      <a href="/#proyectos">Proyectos</a>
+      <a href="/#impacto">Impacto</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="mobile-toggle" aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false">☰</button>
+    <a href="#contacto" class="btn btn-primary header-cta">Contáctanos</a>
+  </header>
+
+  <!-- ═══════════ MOBILE MENU ═══════════ -->
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
+    <div class="mobile-menu-header">
+      <img src="/logo-new.png.webp" alt="Agua Pura" style="height:32px;" />
+      <button class="mobile-close" aria-label="Cerrar menú">✕</button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="/">Inicio</a>
+      <a href="/nosotros.html" class="active">Nosotros</a>
+      <a href="/#tecnologia">Tecnología</a>
+      <a href="/#proyectos">Proyectos</a>
+      <a href="/#impacto">Impacto</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="mobile-menu-footer">
+      <a href="#contacto" class="btn btn-primary" style="width:100%;">Contáctanos</a>
+    </div>
+  </div>
+
+  <!-- ═══════════ HERO: LA VISIÓN ═══════════ -->
+  <section class="story-hero">
+    <div class="container">
+      <div style="max-width: 900px;">
+        <span class="image-caption">Nuestra Identidad</span>
+        <h1 class="narrative-title text-white">Transformando el futuro a través de la <span class="text-primary">ciencia aplicada.</span></h1>
+        <p class="editorial-text">AguaPura Colombia nace de una visión profundamente humana: devolverle la vida a nuestros ríos mediante el rigor científico y la innovación sostenible.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ESCENA 1: EL PROPÓSITO ═══════════ -->
+  <section class="story-section">
+    <div class="container">
+      <div class="grid" style="grid-template-columns: 7fr 5fr; gap: 100px; align-items: center;">
+        <div>
+          <h2 class="text-headline-xl text-white">Compromiso con la <br><span class="text-primary">Salud Ambiental</span></h2>
+          <p class="editorial-text" style="margin-top: 32px;">
+            Fusionamos estrategias globales con raíces locales para enfrentar la remediación de metales pesados en las cuencas vitales de Colombia, asegurando un futuro hídrico seguro.
+          </p>
+          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 64px;">
+            <div>
+              <h4 class="text-headline-md text-white">Misión</h4>
+              <p class="text-body-md text-muted" style="margin-top: 12px;">Soluciones técnicas que mejoren la salud ambiental y la calidad de vida en las comunidades.</p>
+            </div>
+            <div>
+              <h4 class="text-headline-md text-white">Visión</h4>
+              <p class="text-body-md text-muted" style="margin-top: 12px;">Ser el referente regional en ingeniería ambiental de vanguardia para la purificación hídrica.</p>
+            </div>
+          </div>
+        </div>
+        <div class="glass-panel" style="padding: 0; overflow: hidden; border-radius: var(--radius-xl);">
+          <img src="/images/chococol/nosotros.jpeg" alt="Comunidad y Propósito" style="width: 100%; height: 600px; object-fit: cover;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ESCENA 2: LA CIENCIA (PHDs) ═══════════ -->
+  <section class="story-section" style="background: rgba(255,255,255,0.02);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 80px;">
+        <span class="image-caption">Autoridad Científica</span>
+        <h2 class="narrative-title text-white">Expertos a la Vanguardia de la <br><span class="text-primary">Tecnología Ambiental</span></h2>
+      </div>
+      
+      <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 32px;">
+        <div class="phd-card">
+          <span class="phd-number">01</span>
+          <span class="material-symbols-outlined phd-icon">science</span>
+          <h4 class="text-headline-md text-white">Dr. Shameem Hasan</h4>
+          <p class="text-label-caps text-primary" style="margin-bottom: 20px;">Ph.D. • Tratamiento de Aguas</p>
+          <p class="text-body-sm text-muted">Innovador en gestión de aguas residuales y poseedor de múltiples patentes en los Estados Unidos.</p>
+        </div>
+        <div class="phd-card">
+          <span class="phd-number">02</span>
+          <span class="material-symbols-outlined phd-icon">military_tech</span>
+          <h4 class="text-headline-md text-white">Dr. Veera M. Boddu</h4>
+          <p class="text-label-caps text-primary" style="margin-bottom: 20px;">Ph.D. • Ing. Química (US Army)</p>
+          <p class="text-body-sm text-muted">Investigador líder con más de 100 publicaciones. Experto en el uso de biochar y nanomateriales para descontaminación profunda.</p>
+        </div>
+        <div class="phd-card">
+          <span class="phd-number">03</span>
+          <span class="material-symbols-outlined phd-icon">blur_on</span>
+          <h4 class="text-headline-md text-white">Dr. Rafi M. Iasir</h4>
+          <p class="text-label-caps text-primary" style="margin-bottom: 20px;">Ph.D. • Nanotecnología</p>
+          <p class="text-body-sm text-muted">Especialista en desarrollo de materiales de vanguardia para la remoción eficiente de metales pesados en ríos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ESCENA 3: DIRECCIÓN Y GESTIÓN ═══════════ -->
+  <section class="story-section">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 48px;">
+        <span class="image-caption">Liderazgo Estratégico</span>
+        <h2 class="text-headline-xl text-white">Visión y <span class="text-primary">Ejecución</span></h2>
+      </div>
+      
+      <div class="leadership-grid">
+        <div class="leader-featured">
+          <span class="material-symbols-outlined text-primary" style="font-size: 48px; margin-bottom: 24px;">psychology</span>
+          <h4 class="text-headline-lg text-white">Rubén D. Salazar</h4>
+          <p class="text-label-caps text-primary" style="margin-bottom: 24px;">Manager & CBC</p>
+          <p class="editorial-text">Fusiona estrategias corporativas con una visión emprendedora para liderar soluciones ambientales efectivas y empáticas. Su enfoque garantiza que la innovación científica se traduzca en impacto real para las comunidades.</p>
+        </div>
+        <div class="leader-stack">
+          <div class="leader-card">
+            <span class="material-symbols-outlined text-muted" style="margin-bottom: 16px;">agriculture</span>
+            <h4 class="text-headline-md text-white">Emilio Torres L.</h4>
+            <p class="text-label-caps text-primary" style="margin-bottom: 12px;">Ingeniero (U. de Caldas)</p>
+            <p class="text-body-sm text-muted">Aporta su vasta experiencia en agricultura y educación para integrar soluciones técnicas en el campo colombiano.</p>
+          </div>
+          <div class="leader-card">
+            <span class="material-symbols-outlined text-muted" style="margin-bottom: 16px;">account_balance</span>
+            <h4 class="text-headline-md text-white">Dra. Malka Sierra</h4>
+            <p class="text-label-caps text-primary" style="margin-bottom: 12px;">Especialista en Gestión Pública</p>
+            <p class="text-body-sm text-muted">Asegura una gestión eficiente y responsable ante los entes gubernamentales y sectores públicos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ESCENA 4: EL MODELO BIC ═══════════ -->
+  <section class="story-section" style="padding-top: 0;">
+    <div class="container">
+      <div class="bic-display">
+        <div class="grid" style="grid-template-columns: 5fr 7fr; gap: 80px; align-items: center;">
+          <div>
+            <span class="image-caption">Impacto Colectivo</span>
+            <h2 class="text-headline-xl text-white">Nuestro Modelo <span class="text-primary">BIC</span></h2>
+            <p class="editorial-text" style="margin-top: 24px; font-size: 18px;">
+              Como Sociedad de Beneficio e Interés Colectivo, operamos bajo tres pilares fundamentales que garantizan que nuestro impacto positivo sea real, medible y sostenible:
+            </p>
+            <div style="margin-top: 40px; display: flex; flex-direction: column; gap: 24px;">
+              <div style="display:flex; gap:16px;">
+                <span class="material-symbols-outlined text-primary" style="font-size: 32px;">handshake</span>
+                <div>
+                  <h5 class="text-white" style="font-size:18px; margin-bottom: 4px;">Responsabilidad Social</h5>
+                  <p class="text-body-sm text-muted">Trabajamos estrechamente con las comunidades locales, generando empleo y mejorando la salud pública al garantizar el acceso a fuentes de agua libres de metales pesados.</p>
+                </div>
+              </div>
+              <div style="display:flex; gap:16px;">
+                <span class="material-symbols-outlined text-primary" style="font-size: 32px;">eco</span>
+                <div>
+                  <h5 class="text-white" style="font-size:18px; margin-bottom: 4px;">Sostenibilidad Ambiental</h5>
+                  <p class="text-body-sm text-muted">Implementamos economía circular transformando residuos agrícolas en biochar para la remediación activa de ríos y ecosistemas afectados por la minería.</p>
+                </div>
+              </div>
+              <div style="display:flex; gap:16px;">
+                <span class="material-symbols-outlined text-primary" style="font-size: 32px;">attach_money</span>
+                <div>
+                  <h5 class="text-white" style="font-size:18px; margin-bottom: 4px;">Viabilidad Económica</h5>
+                  <p class="text-body-sm text-muted">Desarrollamos un modelo de negocio rentable y escalable que genera valor para los inversores sin comprometer nuestro propósito de regeneración y ética ambiental.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <div style="position: relative; width: 65%; cursor: zoom-in;" onclick="openBicModal()" onmouseover="this.querySelector('img').style.transform='scale(1.05)'" onmouseout="this.querySelector('img').style.transform='scale(1)'">
+              <img src="/images/chococol/diagrama-bic.webp" alt="Modelo BIC" style="width: 100%; filter: drop-shadow(0 0 30px rgba(0,240,255,0.1)); transition: transform 0.4s ease;" />
+              <div style="position: absolute; bottom: 24px; right: 24px; background: rgba(0,240,255,0.1); border: 1px solid var(--primary); color: var(--primary); padding: 8px 16px; border-radius: 20px; font-size: 12px; display: flex; align-items: center; gap: 8px; backdrop-filter: blur(4px); pointer-events: none;">
+                <span class="material-symbols-outlined" style="font-size: 16px;">zoom_in</span> Ampliar
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CTA GRANDE ═══════════ -->
+  <section class="big-cta-section" style="margin-top: 64px;">
+    <div class="container" style="text-align:center; position:relative; z-index:2;">
+      <h2 class="text-headline-xl text-white" style="font-style:italic; font-weight:800;">
+        Sé parte de la <span class="text-primary glow-text">Solución</span>
+      </h2>
+      <p class="text-body-lg" style="max-width:700px; margin:24px auto 40px; color: rgba(255,255,255,0.7);">
+        Ya sea que busques implementar remediación ambiental en tu industria o quieras colaborar con nuestro modelo regenerativo, estamos listos para trabajar juntos.
+      </p>
+      <a href="#contacto" class="btn btn-primary" style="padding:18px 48px;">Inicia un Proyecto</a>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="/logo-new.png.webp" alt="Agua Pura Colombia" style="height:48px; margin-bottom:20px; filter: brightness(0) invert(1);" />
+          <p class="text-body-sm" style="max-width:360px;">Transformando la gestión de recursos hídricos mediante biotecnología y nanotecnología para un futuro sostenible en Colombia.</p>
+        </div>
+        <div class="footer-contact">
+          <h4 class="text-label-caps text-primary" style="margin-bottom:16px;">Contacto</h4>
+          <div style="margin-bottom:20px;">
+            <p class="text-white" style="font-weight:500; font-size:13px;">Oficina Principal - Pereira</p>
+            <p class="text-body-sm">Calle 20 #6-30, Ofc. 1106</p>
+            <p class="text-body-sm">Tel: <strong class="text-white">317 727 7938</strong></p>
+          </div>
+          <div>
+            <p class="text-white" style="font-weight:500; font-size:13px;">Sucursal Caribe - Riohacha</p>
+            <p class="text-body-sm">Calle 30 #21-5, Las Tunas</p>
+            <p class="text-body-sm">Tel: <strong class="text-white">310 323 6639</strong></p>
+          </div>
+        </div>
+        <nav class="footer-nav">
+          <h4 class="text-label-caps text-primary" style="margin-bottom:16px;">Navegación</h4>
+          <a href="/">Inicio</a>
+          <a href="/nosotros.html">Nosotros</a>
+          <a href="/#tecnologia">Tecnología</a>
+          <a href="/#proyectos">Proyectos</a>
+          <a href="/#impacto">Impacto</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="text-body-sm text-muted">© 2026 Agua Pura Colombia S.A.S. BIC. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════ CONTACT MODAL ═══════════ -->
+  <div id="contact-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" inert>
+    <div class="modal-content glass-card">
+      <button class="modal-close" aria-label="Cerrar formulario">✕</button>
+      <div class="modal-body">
+        <div class="section-overline">
+          <span class="line"></span>
+          <span>Escríbenos</span>
+        </div>
+        <h2 class="text-headline-lg text-white" style="margin-bottom: 24px;">Iniciar un <span class="text-primary">Proyecto</span></h2>
+        
+        <form class="contact-form" action="/contact.php" method="POST">
+          <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="form-group">
+              <label class="text-label-caps" for="contact-nombre">Nombre Completo *</label>
+              <input id="contact-nombre" type="text" name="nombre" class="form-control" placeholder="Tu nombre" autocomplete="name" required />
+            </div>
+            <div class="form-group">
+              <label class="text-label-caps" for="contact-email">Email *</label>
+              <input id="contact-email" type="email" name="email" class="form-control" placeholder="correo@ejemplo.com" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="form-group" style="margin-top: 20px;">
+            <label class="text-label-caps" for="contact-telefono">Teléfono</label>
+            <input id="contact-telefono" type="tel" name="telefono" class="form-control" placeholder="+57 300 000 0000" autocomplete="tel" />
+          </div>
+          <div class="form-group" style="margin-top: 20px;">
+            <label class="text-label-caps" for="contact-mensaje">Mensaje *</label>
+            <textarea id="contact-mensaje" name="mensaje" class="form-control" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+          </div>
+          <p class="form-feedback" role="status" aria-live="polite"></p>
+          <button type="submit" class="btn btn-primary" style="width:100%; margin-top:32px;">Enviar Mensaje</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ IMAGE MODAL (BIC) ═══════════ -->
+  <div id="bic-modal" class="modal" role="dialog" aria-modal="true" onclick="closeBicModal()" aria-hidden="true" inert>
+    <button class="modal-close" aria-label="Cerrar imagen ampliada" style="position:absolute; top:32px; right:32px; background:none; border:none; color:white; font-size:32px; cursor:pointer;">✕</button>
+    <img src="/images/chococol/diagrama-bic.webp" alt="Modelo BIC Ampliado" style="max-width: 90%; max-height: 90vh; object-fit: contain; filter: drop-shadow(0 0 40px rgba(0,240,255,0.2)); cursor: zoom-out;" />
+  </div>
+
+  <script>
+    function openBicModal() {
+      const modal = document.getElementById('bic-modal');
+      modal.classList.add('active');
+      modal.removeAttribute('inert');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeBicModal() {
+      const modal = document.getElementById('bic-modal');
+      modal.classList.remove('active');
+      modal.setAttribute('inert', '');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
