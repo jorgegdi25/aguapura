@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Impacto Ambiental La Mojana | Agua Pura Colombia</title>
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="src/style.css" />
-  <link rel="stylesheet" href="src/pages.css" />
-  
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Impacto Ambiental La Mojana | Agua Pura Colombia" activePage="impacto">
   <style>
     .story-hero {
       height: 70vh;
@@ -37,46 +26,6 @@
       font-weight: 600;
     }
   </style>
-</head>
-<body>
-
-  <!-- ═══════════ HEADER ═══════════ -->
-  <header id="main-header">
-    <a href="index.html" class="logo-container">
-      <img src="logo-new.png.webp" alt="Agua Pura Colombia" style="filter: brightness(0) invert(1);" />
-    </a>
-    <nav class="desktop-nav">
-      <a href="index.html">Inicio</a>
-      <a href="nosotros.html">Nosotros</a>
-      <a href="index.html#tecnologia">Tecnología</a>
-      <a href="index.html#proyectos">Proyectos</a>
-      <a href="impacto-mojana.html" class="active">Impacto</a>
-      <a href="index.html#noticias">Novedades</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-    <button class="mobile-toggle" aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false">☰</button>
-    <a href="#contacto" class="btn btn-primary header-cta">Contáctanos</a>
-  </header>
-
-  <!-- ═══════════ MOBILE MENU ═══════════ -->
-  <div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
-    <div class="mobile-menu-header">
-      <img src="logo-new.png.webp" alt="Agua Pura" style="height:32px;" />
-      <button class="mobile-close" aria-label="Cerrar menú">✕</button>
-    </div>
-    <nav class="mobile-nav">
-      <a href="index.html">Inicio</a>
-      <a href="nosotros.html">Nosotros</a>
-      <a href="index.html#tecnologia">Tecnología</a>
-      <a href="index.html#proyectos">Proyectos</a>
-      <a href="impacto-mojana.html" class="active">Impacto</a>
-      <a href="index.html#noticias">Novedades</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-    <div class="mobile-menu-footer">
-      <a href="#contacto" class="btn btn-primary" style="width:100%;">Contáctanos</a>
-    </div>
-  </div>
 
   <!-- ═══════════ HERO ═══════════ -->
   <section class="story-hero">
@@ -183,81 +132,4 @@
       <a href="#contacto" class="btn btn-primary" style="padding:18px 48px;">Solicitar Información</a>
     </div>
   </section>
-
-  <!-- ═══════════ FOOTER ═══════════ -->
-  <footer>
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img src="logo-new.png.webp" alt="Agua Pura Colombia" style="height:48px; margin-bottom:20px; filter: brightness(0) invert(1);" />
-          <p class="text-body-sm" style="max-width:360px;">Transformando la gestión de recursos hídricos mediante biotecnología y nanotecnología para un futuro sostenible en Colombia.</p>
-        </div>
-        <div class="footer-contact">
-          <h4 class="text-label-caps text-primary" style="margin-bottom:16px;">Contacto</h4>
-          <div style="margin-bottom:20px;">
-            <p class="text-white" style="font-weight:500; font-size:13px;">Oficina Principal - Pereira</p>
-            <p class="text-body-sm">Calle 20 #6-30, Ofc. 1106</p>
-            <p class="text-body-sm">Tel: <strong class="text-white">317 727 7938</strong></p>
-          </div>
-          <div>
-            <p class="text-white" style="font-weight:500; font-size:13px;">Sucursal Caribe - Riohacha</p>
-            <p class="text-body-sm">Calle 30 #21-5, Las Tunas</p>
-            <p class="text-body-sm">Tel: <strong class="text-white">310 323 6639</strong></p>
-          </div>
-        </div>
-        <nav class="footer-nav">
-          <h4 class="text-label-caps text-primary" style="margin-bottom:16px;">Navegación</h4>
-          <a href="index.html">Inicio</a>
-          <a href="nosotros.html">Nosotros</a>
-          <a href="index.html#tecnologia">Tecnología</a>
-          <a href="index.html#proyectos">Proyectos</a>
-          <a href="impacto-mojana.html">Impacto</a>
-          <a href="index.html#noticias">Novedades</a>
-        </nav>
-      </div>
-      <div class="footer-bottom">
-        <p class="text-body-sm text-muted">© 2026 Agua Pura Colombia S.A.S. BIC. Todos los derechos reservados.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ═══════════ CONTACT MODAL ═══════════ -->
-  <div id="contact-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" inert>
-    <div class="modal-content glass-card">
-      <button class="modal-close" aria-label="Cerrar formulario">✕</button>
-      <div class="modal-body">
-        <div class="section-overline">
-          <span class="line"></span>
-          <span>Escríbenos</span>
-        </div>
-        <h2 class="text-headline-lg text-white" style="margin-bottom: 24px;">Iniciar un <span class="text-primary">Proyecto</span></h2>
-        
-        <form class="contact-form" action="contact.php" method="POST">
-          <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-            <div class="form-group">
-              <label class="text-label-caps" for="contact-nombre">Nombre Completo *</label>
-              <input id="contact-nombre" type="text" name="nombre" class="form-control" placeholder="Tu nombre" autocomplete="name" required />
-            </div>
-            <div class="form-group">
-              <label class="text-label-caps" for="contact-email">Email *</label>
-              <input id="contact-email" type="email" name="email" class="form-control" placeholder="correo@ejemplo.com" autocomplete="email" required />
-            </div>
-          </div>
-          <div class="form-group" style="margin-top: 20px;">
-            <label class="text-label-caps" for="contact-telefono">Teléfono</label>
-            <input id="contact-telefono" type="tel" name="telefono" class="form-control" placeholder="+57 300 000 0000" autocomplete="tel" />
-          </div>
-          <div class="form-group" style="margin-top: 20px;">
-            <label class="text-label-caps" for="contact-mensaje">Mensaje *</label>
-            <textarea id="contact-mensaje" name="mensaje" class="form-control" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
-          </div>
-          <p class="form-feedback" role="status" aria-live="polite"></p>
-          <button type="submit" class="btn btn-primary" style="width:100%; margin-top:32px;">Enviar Mensaje</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <script type="module" src="src/main.js"></script>
-</body>
-</html>
+</Layout>
