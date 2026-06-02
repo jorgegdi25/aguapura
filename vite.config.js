@@ -10,6 +10,7 @@ export default defineConfig({
         impactoAtrato: 'impacto-atrato.html',
         impactoMojana: 'impacto-mojana.html',
         alianzaCafe: 'alianza-cafe.html',
+        alianzaGuajira: 'alianza-guajira.html',
       },
     },
   },
