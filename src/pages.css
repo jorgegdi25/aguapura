@@ -54,6 +54,14 @@
   text-shadow: 0 2px 10px rgba(0,0,0,0.5); /* Sombra para legibilidad */
 }
 
+.hero-content .text-display-2xl {
+  max-width: 1180px;
+}
+
+.hero-content .text-body-lg {
+  color: rgba(255, 255, 255, 0.88);
+}
+
 .cta-group { display: flex; gap: 16px; flex-wrap: wrap; }
 
 /* ── Quote Banner ── */
@@ -307,7 +315,7 @@
   overflow: hidden;
   background:
     linear-gradient(rgba(10,18,20,0.5), rgba(10,18,20,0.7)), /* Reducido de 0.85 para hacer visible la imagen */
-    url('../public/images/chococol/tech-water.jpeg') center/cover;
+    url('/images/chococol/tech-water.jpeg') center/cover;
 }
 
 /* ── Contact ── */
