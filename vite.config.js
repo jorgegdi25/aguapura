@@ -9,6 +9,7 @@ export default defineConfig({
         nosotros: 'nosotros.html',
         impactoAtrato: 'impacto-atrato.html',
         impactoMojana: 'impacto-mojana.html',
+        alianzaCafe: 'alianza-cafe.html',
       },
     },
   },
